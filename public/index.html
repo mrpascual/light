@@ -16,23 +16,28 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-  <a class="navbar-brand"><!-- <img src="" width="40" height="40"> -->Logo</a>
-  <div class="pull-right">
-    <button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
-    <button type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
-  </div>
-  </div>
-</nav>
+<div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <a class="navbar-brand"><!-- <img src="" width="40" height="40"> -->Logo</a>
+    <div class="pull-right">
+      <button type="button" class="btn btn-default navbar-btn navbar-right" >Sign in</button>
+      <button type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+      <a class="btn btn-default navbar-btn navbar-right" href="#" role="button" ui-sref="about">About</a>
+    </div>
+    </div>
+  </nav>
 
 
+  <main class="content" ui-view>
 
+  </main>
+</div>
 
-<h1>Welcome To Refugee Helper</h1>
 
 <img src="/images/welcome_page.jpg" class="img-responsive img-rounded">
 
 <script src="/js/app/app.module.js"></script>
+<script src="/js/app/config/app.routes.js"></script>
 </body>
 </html>

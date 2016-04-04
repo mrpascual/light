@@ -13,6 +13,10 @@
         url: "/",
         templateUrl: "/js/app/layouts/welcome.html"
       })
+      .state("about", {
+        url: "/about",
+        templateUrl: "/js/app/layouts/about.html"
+      });
 
     $urlRouterProvider.otherwise("/");
   }
