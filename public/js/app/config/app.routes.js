@@ -23,7 +23,9 @@
       })
       .state("list", {
         url: "/list",
-        templateUrl: "/js/app/templates/refugee.list.html"
+        templateUrl: "/js/app/templates/refugee.list.html",
+        controller: "RefugeesController",
+        controllerAs: "vm"
       })
       .state("info", {
         url: "/info",
