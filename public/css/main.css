@@ -10,12 +10,23 @@ body {
 body {
   font-size: 14px;
   padding: 50px;
+  padding-top: 100px;
 
-  background: #E91E63;
+  background-color: #AEC6CF;
+
+  /*background: #64b3f4;*/
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #E91E63, #EAECC6);
+  /*background: -webkit-linear-gradient(to left, #64b3f4, #E5E5BE);*/
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #E91E63, #EAECC6);
+  /*background: linear-gradient(to left, #64b3f4, #E5E5BE);*/
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  /*background: #F1F2B5;*/
+  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #F1F2B5, #135058);*/
+  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #F1F2B5, #135058);*/
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -27,6 +38,16 @@ h1 {
   text-align: center;
 }
 
-.navbar {
-  color: black;
+.navbar-default {
+  background-color:#50404D;
+  color:#ffffff;
+  border-radius:0;
+}
+
+.btn-custom:hover {
+  color: #DEA5A4;
+}
+
+.btn-custom {
+  color: #ffffff;
 }
