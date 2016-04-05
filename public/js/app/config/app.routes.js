@@ -16,7 +16,15 @@
       .state("about", {
         url: "/about",
         templateUrl: "/js/app/layouts/about.html"
-      });
+      })
+      .state("map", {
+        url: "/map",
+        templateUrl: "/js/app/layouts/map.html"
+      })
+      .state("list", {
+        url: "/list",
+        templateUrl: "/js/app/layouts/refugee.list.html"
+      })
 
     $urlRouterProvider.otherwise("/");
   }

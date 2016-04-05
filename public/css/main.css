@@ -51,3 +51,22 @@ h1 {
 .btn-custom {
   color: #ffffff;
 }
+
+
+.btn-custom1 {
+  color: #ffffff;
+}
+
+.btn-custom1:hover {
+  color: #DEA5A4;
+}
+
+
+.btn-customMap:hover {
+  color: #DEA5A4;
+}
+
+.btn-customMap {
+  color: #ffffff;
+  padding-right: 100px;
+}
