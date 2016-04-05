@@ -11,19 +11,23 @@
     $stateProvider
       .state("welcome", {
         url: "/",
-        templateUrl: "/js/app/layouts/welcome.html"
+        templateUrl: "/js/app/templates/welcome.html"
       })
       .state("about", {
         url: "/about",
-        templateUrl: "/js/app/layouts/about.html"
+        templateUrl: "/js/app/templates/about.html"
       })
       .state("map", {
         url: "/map",
-        templateUrl: "/js/app/layouts/map.html"
+        templateUrl: "/js/app/templates/map.html"
       })
       .state("list", {
         url: "/list",
-        templateUrl: "/js/app/layouts/refugee.list.html"
+        templateUrl: "/js/app/templates/refugee.list.html"
+      })
+      .state("info", {
+        url: "/info",
+        templateUrl: "/js/app/templates/refugee.info.html"
       })
 
     $urlRouterProvider.otherwise("/");
