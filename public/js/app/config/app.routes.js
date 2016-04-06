@@ -29,7 +29,9 @@
       })
       .state("info", {
         url: "/info",
-        templateUrl: "/js/app/templates/refugee.info.html"
+        templateUrl: "/js/app/templates/refugee.info.html",
+        controller: "RefugeesController",
+        controllerAs: "vm"
       })
 
     $urlRouterProvider.otherwise("/");

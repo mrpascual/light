@@ -1,11 +1,26 @@
-<h1>Add Your Informration Here</h1>
+<h1>Add Your Information Here</h1>
 <hr>
 <br>
 
+<!-- <div>
+    <select name="" required ng-model="vm.user.gender" required>
+      <option value=""></option>
+      <option ng-repeat="gender in ['M','F']" value="{{gender}}">{{gender}}</option>
+    </select>
+</div>
+      {{vm.user.gender}} -->
 
-<section ng-controller="RefugeesController as vm"
+
+
+
+
+
+
+
+
+<section>
 <div class="row">
-  <form id="new-refugee" class="form-inline">
+  <form name="form" id="new-refugee" class="form-inline">
     <div class="row">
 
       <div class="form-group">
@@ -17,81 +32,59 @@
         <label for="last_name">Last Name</label>
       </div>
       <div class="form-group">
-        <input id="middle_name" type="text" class="validate">
+        <input id="middle_name" type="text" class="validate" ng-model="vm.newRefugee.middleName">
         <label for="middle_name">Middle</label>
       </div>
       <br>
       <div class="form-group">
-        <input id="date_of_birth" type="text" class="validate">
+        <input id="date_of_birth" type="text" class="validate" ng-model="vm.newRefugee.dob">
         <label for="date_of_birth">Date Of Birth</label>
       </div>
-      <div class="dropdown">
-        <label for="gender">Gender</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>Male</a>
-          <a>Female</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <label for="Nationality">Nationality</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>List</a>
-        </div>
-      </div>
-      <br>
-      <div class="dropdown">
-        <label for="current_location">Current Location</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>List</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <label for="past_location">Past Location/s</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>List</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <label for="aid_station">Aid Station</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>List</a>
-        </div>
-      </div>
-      <br>
-      <div class="dropdown">
-        <label for="condition">Condition</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>List</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <label for="marital_status">Marital Status</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>List</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <label for="children">Children</label>
-        <button class="dropbtn">Select</button>
-        <div class="dropdown-content">
-          <a>0</a>
-          <a>1</a>
-          <a>2</a>
-          <a>3</a>
-          <a>4</a>
-          <a>5</a>
-        </div>
-      </div>
+
+
+<br>
+
+
+    <div>
+      <form name="myForm">
+        <label for="mySelect">Gender</label>
+        <select ng-model="selectedItem" ng-options="selectedItem as selectedItem.name for selectedItem in values"></select>
+            selectedItem: {{selectedItem.name}}
+      </form>
     </div>
-    <button class="btn btn-default" type="submnit" ng-click="vm.postRefugee()">Save</button>
+
+
+
+
+<!-- <div ng-controller="RefugeesController">
+  <form name="myForm">
+    <label for="mySelect">Gender</label>
+    <select name="mySelect" id="mySelect"
+      ng-options="option.name for option in data.availableOptions track by option.id"
+      ng-model="vm.newRefugee.gender"></select>
+  </form>
+</div> -->
+
+
+
+<!--       <div ng-controller="GenderController">
+        <form name="myForm">
+          <label for="repeatSelect"> Repeat select: </label>
+          <select name="repeatSelect" id="repeatSelect" ng-model="data.repeatSelect">
+            <option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
+          </select>
+        </form>
+        <hr>
+        <tt>repeatSelect = {{data.repeatSelect}}</tt><br/>
+      </div> -->
+
+
+
+
+    </div>
+    <button  class="btn btn-default" type="submit" ng-click="vm.postRefugee()">Save</button>
   </form>
 </div>
+
 
 </section>
