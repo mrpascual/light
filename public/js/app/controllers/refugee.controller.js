@@ -18,7 +18,7 @@
 
 
     var vm = this;
-    vm.all = [];
+    vm.refugees = [];
     vm.getRefugee = getRefugee;
     vm.postRefugee = postRefugee;
     vm.newRefugee = {};
@@ -28,13 +28,13 @@
             firstName: "",
             lastName: "",
             middleName: "",
-            dob: "",
-            gender: ""
+            dob: ""
             // gender: "",
             // nationality: "",
             // pictureUrl: ""
           }
 
+    getRefugee();
 
      function getRefugee() {
       $http
@@ -42,6 +42,7 @@
           headers: {'Content-Type': 'application/json'}
         })
         .then(function(response) {
+          $log.debug(response)
           vm.refugees = response.data;
           // $log.info(vm.refugees);
           // $log.info("got one!");
@@ -51,6 +52,7 @@
     }
 
     function postRefugee() {
+      $log.info("our refugee", vm.newRefugee)
       $http
         .post('http://localhost:3000/api/users', vm.newRefugee)
         .then(getRefugee())

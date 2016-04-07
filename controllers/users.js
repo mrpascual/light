@@ -2,14 +2,30 @@ var User = require("../models/user");
 
 module.exports = {
   index: index,
-  create: create
+  show: show,
+  create: create,
+  update: update,
+  destroy: destroy
 }
 
 function index(req, res) {
+    console.log("grabbing users")
     User.find({}, function(err, users) {
       if(err) res.send(err);
 
       res.json(users);
+      console.log("got em", users)
+  });
+}
+
+function show(req, res, next) {
+  var id = req.params.id;
+
+  User.findById(id, function(err, user) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(users);
   });
 }
 
@@ -20,7 +36,7 @@ function create(req, res) {
   user.lastName    = req.body.lastName;
   user.middleName  = req.body.middleName;
   user.dob         = req.body.dob;
-  user.gender      = req.body.gender;
+  user.gender      = req.body.selectedItem.name.name;
   user.nationality = req.body.nationality;
   user.pictureUrl  = req.body.pictureUrl;
 
@@ -42,3 +58,41 @@ function create(req, res) {
   });
 
 };
+
+function update(req, res) {
+  var id = req.params.id;
+
+  User.findById(id, function(err, user) {
+
+    if (err) {
+      res.send(err);
+    }
+
+    if (req.body.firstName) user.firstName = req.body.firstName;
+    if (req.body.lastName) user.lastName = req.body.lastName;
+    if (req.body.middleName) user.middleName = req.body.middleName;
+    if (req.body.dob) user.dob = req.body.dob;
+    if (req.body.gender) user.gender = req.body.gender;
+    if (req.body.nationality) user.nationality = req.body.nationality;
+    if (req.body.pictureUrl) user.pictureUrl = req.body.pictureUrl;
+
+    user.save(function(err, updatedUser) {
+      if (err) {
+        res.send(err);
+      }
+      console.log("Updated!");
+      res.json(updatedUser);
+    });
+  });
+}
+
+function destroy(req, res) {
+  var id = req.params.id;
+
+  User.remove({"_id" : id}, function(err) {
+    if (err) {
+      res.send(err);
+    }
+    res.json({ message: 'Deleted!'});
+  });
+}
