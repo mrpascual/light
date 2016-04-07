@@ -1,48 +1,56 @@
 <h1>Add Your Information Here</h1>
 <hr>
 
-
-
-
-
   <form name="form" id="new-refugee" class="form-inline">
-
-
-      <div class="col-2">
-        <label for="first_name">
-          First Name
-          <input  id="first_name" type="text" class="validate" ng-model="vm.newRefugee.firstName">
-        </label>
-      </div>
-      <div class="col-2">
-        <label for="last_name">
-          Last Name
-          <input id="last_name" type="text" class="validate" ng-model="vm.newRefugee.lastName">
-        </label>
-      </div>
-      <div class="col-2">
-        <label for="middle_name">
-          Middle Name
-          <input id="middle_name" type="text" class="validate" ng-model="vm.newRefugee.middleName">
-        </label>
-      </div>
-
-      <div class="col-4">
-        <label for="date_of_birth">
-          Date Of Birth
-          <input id="date_of_birth" type="date" class="validate" ng-model="vm.newRefugee.dob">
-        </label>
-      </div>
-
-
-    <div class="col-3">
-        <label for="mySelect">
-          Gender
-          <select ng-model="vm.newRefugee.selectedItem.name" ng-options="selectedItem as selectedItem.name for selectedItem in values"></select>
-           <!--  selectedItem: {{selectedItem.name}} -->
-        </label>
+    <div class="col-2">
+      <label for="first_name">
+        First Name
+        <input  id="first_name" type="text" class="validate" ng-model="vm.newRefugee.firstName">
+      </label>
     </div>
-
+    <div class="col-2">
+      <label for="last_name">
+        Last Name
+        <input id="last_name" type="text" class="validate" ng-model="vm.newRefugee.lastName">
+      </label>
+    </div>
+    <div class="col-2">
+      <label for="middle_name">
+        Middle Name
+        <input id="middle_name" type="text" class="validate" ng-model="vm.newRefugee.middleName">
+      </label>
+    </div>
+    <div class="col-4">
+      <label for="date_of_birth">
+        Date Of Birth
+        <input id="date_of_birth" type="date" class="validate" ng-model="vm.newRefugee.dob">
+      </label>
+    </div>
+    <div class="col-3">
+      <label for="mySelect">
+        Gender
+        <select ng-model="vm.newRefugee.selectedItem.name" ng-options="selectedItem as selectedItem.name for selectedItem in values"></select>
+         <!--  selectedItem: {{selectedItem.name}} -->
+      </label>
+    </div>
+    <div class="col-2">
+      <label for="nationality">
+        Nationality
+        <input id="nationality" type="text" class="validate" ng-model="vm.newRefugee.nationality">
+      </label>
+    </div>
+    <div class="col-2">
+      <label for="status">
+        Status
+        <input id="status" type="text" class="validate" ng-model="vm.newRefugee.status">
+      </label>
+    </div>
+    <div class="col-2">
+      <label for="status">
+        Location
+        <input id="status" type="text" class="validate" ng-model="vm.newRefugee.status">
+      </label>
+    </div>
     <button  class="btn btn-default" type="submit" ng-click="vm.postRefugee()">Submit</button>
   </form>
 

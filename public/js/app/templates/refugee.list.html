@@ -1,15 +1,27 @@
-<!-- <h1>List Of Refugees</h1> -->
-<!-- {{vm.refugees[1].firstName}} -->
-<!-- {{vm.refugees[1].lastName}}
-{{vm.refugees[1].locs}}
-<br>
-{{vm.refugees[1].pictureUrl}} -->
-
-
-<ul id="refugees" class="indent-list">
-  <li ng-repeat="refugees in vm.refugees" class="refugees-li">
-    <strong>{{refugees.firstName}}</strong> <srong>{{refugees.locs}}</srong>
-  </li>
-</ul>
-
-
+<h1>List Of Refugees</h1>
+<hr>
+<div class="row">
+  <div class="col-xs-6">
+    <label>Search</label>
+    <input type="search" class="form-control" ng-model="vm.search" placeholder="search...">
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Location</th>
+      <th class="text-right">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="refugees in vm.refugees | filter:vm.search">
+      <td>{{refugees.firstName}} {{refugees.lastName}}</td>
+      <td>{{refugees.status}}</td>
+      <td>{{refugees.locs}}</td>
+      <tr ng-repeat="refugees in vm.refugees | filter:{locs: name}"></tr>
+      <td class="text-right">{{refugees.pictureUrl}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -10,12 +10,10 @@
   function RefugeesController($http, $log, $scope) {
 
     $scope.values = [
-        {id: "1", name: "Male"},
-        {id: "2", name: "Female"}
-      ];
+      {id: "1", name: "Male"},
+      {id: "2", name: "Female"}
+    ];
     $scope.selectedItem = $scope.values[0].id;
-
-
 
     var vm = this;
     vm.refugees = [];
@@ -28,11 +26,22 @@
             firstName: "",
             lastName: "",
             middleName: "",
-            dob: ""
-            // gender: "",
-            // nationality: "",
-            // pictureUrl: ""
+            dob: "",
+            gender: "",
+            nationality: "",
+            status: "",
+            pictureUrl: "",
+            locs: {
+              name: "",
+              address: "",
+              zip: "",
+              currentLoc: ""
+            }
           }
+
+    // vm.sortBy = function(name) {
+    //   vm.sortField = name;
+    // };
 
     getRefugee();
 

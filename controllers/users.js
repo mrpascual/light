@@ -38,6 +38,7 @@ function create(req, res) {
   user.dob         = req.body.dob;
   user.gender      = req.body.selectedItem.name.name;
   user.nationality = req.body.nationality;
+  user.status      = req.body.status;
   user.pictureUrl  = req.body.pictureUrl;
 
   user.locs = [];
@@ -74,6 +75,7 @@ function update(req, res) {
     if (req.body.dob) user.dob = req.body.dob;
     if (req.body.gender) user.gender = req.body.gender;
     if (req.body.nationality) user.nationality = req.body.nationality;
+    if (req.body.status) user.status = req.body.status;
     if (req.body.pictureUrl) user.pictureUrl = req.body.pictureUrl;
 
     user.save(function(err, updatedUser) {
