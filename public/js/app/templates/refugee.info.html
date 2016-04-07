@@ -3,7 +3,7 @@
 
 
 
-<section>
+
 
   <form name="form" id="new-refugee" class="form-inline">
 
@@ -22,12 +22,12 @@
       </div>
       <div class="col-2">
         <label for="middle_name">
-          Middle
+          Middle Name
           <input id="middle_name" type="text" class="validate" ng-model="vm.newRefugee.middleName">
         </label>
       </div>
 
-      <div class="form-group">
+      <div class="col-4">
         <label for="date_of_birth">
           Date Of Birth
           <input id="date_of_birth" type="date" class="validate" ng-model="vm.newRefugee.dob">
@@ -35,21 +35,17 @@
       </div>
 
 
-    <div>
-      <form name="myForm">
+    <div class="col-3">
         <label for="mySelect">
           Gender
           <select ng-model="vm.newRefugee.selectedItem.name" ng-options="selectedItem as selectedItem.name for selectedItem in values"></select>
-            selectedItem: {{selectedItem.name}}
+           <!--  selectedItem: {{selectedItem.name}} -->
         </label>
-      </form>
     </div>
 
-
-
-    <button  class="btn btn-default" type="submit" ng-click="vm.postRefugee()">Save</button>
+    <button  class="btn btn-default" type="submit" ng-click="vm.postRefugee()">Submit</button>
   </form>
 
 
 
-</section>
+

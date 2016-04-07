@@ -38,6 +38,12 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  color: #ffffff;
+  font-family: helvetica;
+  text-align: center;
+}
+
 footer {
   text-align: center;
 }
@@ -48,17 +54,18 @@ footer {
   border-radius:0;
 }
 
-.btn-custom:hover {
+/*.btn-custom:hover {
   color: #DEA5A4;
 }
 
 .btn-custom {
   color: #ffffff;
-}
+}*/
 
 
 .btn-custom1 {
   color: #ffffff;
+  padding: 17px 60px 6px 60px;
 }
 
 .btn-custom1:hover {
@@ -66,65 +73,21 @@ footer {
 }
 
 
-.btn-customMap:hover {
+/*.btn-customMap:hover {
   color: #DEA5A4;
 }
 
 .btn-customMap {
   color: #ffffff;
   padding-right: 100px;
-}
-
-/* Style The Dropdown Button */
-/*.dropbtn {*/
-  /*  background-color: #4CAF50;*/
-/*    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
 }*/
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
+.navButs {
+  padding-right: 315px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/*.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}*/
-
-.btn-customSubmit {
-  display: block;
-  margin: 100px auto;
-}
 
 form {
   display: block;
@@ -140,12 +103,6 @@ form {
 form div {
   display: inline-block;
   width: 100%;
-  font-family: Source Sans Pro, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #939393;
-  cursor: pointer;
 }
 
 form div label {
@@ -160,9 +117,14 @@ form div label {
   cursor: pointer;
 }
 
-form div.col-2 { width: 33.3333333333% }
+form div.col-2, form div.col-3, form div.col-4, form div.col-5 { box-shadow: 1px 1px #E4E4E4 }
 
-form div input
+form div.col-2 { width: 33.3333333333% }
+form div.col-3 { width: 13.35% }
+form div.col-4 { width: 20% }
+form div.col-5 { width: 20% }
+
+form div label input
 {
   display: inline-block;
   position: relative;
@@ -177,6 +139,38 @@ form div input
   background: transparent;
   font-size: 14px;
   font-weight: 200;
-  opacity: .66;
+  opacity: .75;
   transition: opacity .3s, box-shadow .3s;
+}
+
+form div label select
+{
+  display: block;
+  width: 90%;
+  margin: 10px 0 1px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: .75;
+}
+
+form div label input:focus, form div label select:focus
+{
+  opacity: 1;
+  box-shadow: 0 3px 4px rgba(174, 198, 207, 1);
+}
+
+
+.btn-default {
+  display: block;
+  margin: 100px auto;
+  width: 120px;
+  margin-bottom: 22px;
+}
+
+.btn-default:hover {
+  color: #DEA5A4;
 }
