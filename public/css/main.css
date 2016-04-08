@@ -231,6 +231,14 @@ btn[type = "submit"]:hover {
    text-decoration: none;
 }
 
+.mylogo {
+  width: 519px;
+  height: 426px;
+  text-align: center;
+  margin-left: 430px;
+
+}
+
 .share-me, .share-me:hover, .share-me:active, .share-me:visited {
    text-decoration: none;
 }
