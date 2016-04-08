@@ -1,4 +1,4 @@
-<h1>LIGHT</h1>
+<!-- <h1>WELCOME</h1>
 
 <br>
 
@@ -9,4 +9,52 @@
 <br>
 <hr>
 
-<img src="/images/welcome_page.jpg" class="img-responsive img-rounded">
+<img src="/images/welcome_page.jpg" class="img-responsive img-rounded"> -->
+
+
+
+<!-- <header class="main_h">
+<div class="row">
+  <a class="logo" href="#">LIGHT</a>
+  <nav>
+    <ul>
+      <li><a>About</a></li>
+      <li><a ui-sref="list">Find Me</a></li>
+      <li><a ui-sref="info">Share Me</a></li>
+    </ul>
+  </nav>
+</div>
+</header> -->
+
+<div class="main-front">
+  <h1><span>LIGHT</span>
+   <br>Welcome</h1>
+</div>
+
+<div class="row content">
+  <h1 class="welcome-about">ABOUT</h1>
+  <br>
+  <p>Light is a web application to help refugees reunite with their loved ones.</p>
+</div>
+
+<script>
+//sticky header
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+        $('.main_h').addClass('sticky');
+    } else {
+        $('.main_h').removeClass('sticky');
+  }
+});
+
+//navigation scroll
+  $('nav a').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 70;
+    var target = $(id).offset().top - offset;
+    $('html, body').animate({
+        scrollTop: target
+    }, 500);
+    event.preventDefault();
+});
+</script>

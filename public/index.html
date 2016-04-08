@@ -6,8 +6,12 @@
 
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"> -->
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/css/animation.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
   <script src="http://maps.google.com/maps/api/js"></script>
   <script src="/js/vendor/jwt-decode.2.0.1.js"></script>
@@ -24,30 +28,66 @@
   <script src="//rawgit.com/angular-ui/angular-google-maps/2.3.2/dist/angular-google-maps.min.js"></script>
 
 </head>
+
+
+
+
+<header class="main_h">
+<div class="row">
+  <a class="logo" ui-sref="welcome">LIGHT</a>
+  <nav>
+    <ul>
+      <li><a class="share-me" ui-sref="info">Share Me</a></li>
+      <li><a class="find-me" ui-sref="list">Find Me</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
 <body>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-    <a ui-sref="welcome" class="navbar-brand"><img src="" width="40" height="40"><!-- Logo --></a>
+    <a ui-sref="welcome" class="navbar-brand"><img src="" width="40" height="40"></a>
       <div class="navButs">
-    <!--       <a class="btn btn-custom navbar-btn navbar-right" role="button" >Log In</button>
-        <a class="btn btn-custom navbar-btn navbar-right" role="button" >Sign Up</button>
-        <br> -->
         <a class="btn btn-custom1 navbar-btn navbar-right" role="button" ui-sref="list">Find Me</a>
         <a class="btn btn-custom1 navbar-btn navbar-right" role="button" ui-sref="info">Share Me</a>
       </div>
     </div>
   </nav>
+</div> -->
 
-  <main class="content" ui-view></main>
-</div>
+<main class="content" ui-view></main>
+
 
 <footer>
   <hr>
   <br>
   <span>© 2016, LIGHT</span>
 </footer>
+
+<script>
+//sticky header
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+        $('.main_h').addClass('sticky');
+    } else {
+        $('.main_h').removeClass('sticky');
+  }
+});
+
+//navigation scroll
+  $('nav a').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 70;
+    var target = $(id).offset().top - offset;
+    $('html, body').animate({
+        scrollTop: target
+    }, 500);
+    event.preventDefault();
+});
+</script>
 
 <script src="/js/app/app.module.js"></script>
 <script src="/js/app/config/app.routes.js"></script>
