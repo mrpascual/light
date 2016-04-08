@@ -2,7 +2,7 @@
   "use strict";
 
   angular
-    .module("app", ["ui.router", "ngAnimate"]);
+    .module("app", ["ui.router", "ngAnimate", "nemLogging", "uiGmapgoogle-maps"]);
 
 
 })();

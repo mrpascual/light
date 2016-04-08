@@ -3,9 +3,8 @@ var mongoose = require('mongoose'),
 
 var locationSchema = new mongoose.Schema({
   name:       String,
-  address:    { type: String,  required: true },
-  zip:        { type: String,  required: true },
-  currentLoc: { type: Boolean, required: true }
+  address:    String,
+  zip:        String
 });
 
 var userSchema = new mongoose.Schema({

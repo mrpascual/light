@@ -6,6 +6,7 @@
     <input type="search" class="form-control" ng-model="vm.search" placeholder="search...">
   </div>
 </div>
+<hr>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -16,12 +17,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="refugees in vm.refugees | filter:vm.search">
-      <td>{{refugees.firstName}} {{refugees.lastName}}</td>
-      <td>{{refugees.status}}</td>
-      <td>{{refugees.locs}}</td>
-      <tr ng-repeat="refugees in vm.refugees | filter:{locs: name}"></tr>
-      <td class="text-right">{{refugees.pictureUrl}}</td>
+    <tr ng-repeat="refugee in vm.refugees | filter:vm.search">
+      <td>{{refugee.firstName}} {{refugee.lastName}}</td>
+      <td>{{refugee.status}}</td>
+      <td>
+        <div class="loc-in-list" ng-repeat="loc in refugee.locs track by $index" ng-click="vm.mapLocation(loc)">
+          <p>{{loc.name}}</p>
+          <p>{{loc.address}}</p>
+          <p>{{loc.zip}}</p>
+        </div>
+      </td>
+      <td class="text-right"><img ng-src="{{refugees.pictureUrl}}"></td>
     </tr>
   </tbody>
 </table>

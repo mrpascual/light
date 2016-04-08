@@ -19,12 +19,13 @@
       })
       .state("map", {
         url: "/map",
-        templateUrl: "/js/app/templates/map.html"
+        templateUrl: "/js/app/templates/map.html",
+        controller: "MapController as vm"
       })
       .state("list", {
         url: "/list",
         templateUrl: "/js/app/templates/refugee.list.html",
-        controller: "RefugeesController",
+        controller: "ListController",
         controllerAs: "vm"
       })
       .state("info", {

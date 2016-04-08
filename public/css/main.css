@@ -122,7 +122,7 @@ form div.col-2, form div.col-3, form div.col-4, form div.col-5 { box-shadow: 1px
 form div.col-2 { width: 33.3333333333% }
 form div.col-3 { width: 13.35% }
 form div.col-4 { width: 20% }
-form div.col-5 { width: 20% }
+form div.col-5 { width: 50% }
 
 form div label input
 {
@@ -174,3 +174,16 @@ form div label input:focus, form div label select:focus
 .btn-default:hover {
   color: #DEA5A4;
 }
+
+
+.angular-google-map-container {
+        height: 400px;
+}
+
+.loc-in-list {
+  cursor: pointer;
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 10px;
+}
+

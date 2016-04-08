@@ -39,18 +39,28 @@
         <input id="nationality" type="text" class="validate" ng-model="vm.newRefugee.nationality">
       </label>
     </div>
-    <div class="col-2">
+    <div class="col-5">
       <label for="status">
         Status
         <input id="status" type="text" class="validate" ng-model="vm.newRefugee.status">
       </label>
     </div>
-    <div class="col-2">
-      <label for="status">
-        Location
-        <input id="status" type="text" class="validate" ng-model="vm.newRefugee.status">
-      </label>
-    </div>
+
+
+    <form name="form" id="new-refugee-loc" class="form-inline">
+      <div class="col-5">
+        <label for="locs">
+          Location
+          <input id="locs-name" type="text" class="validate" placeholder="Name" ng-model="vm.newRefugee.locs.name">
+          <input id="locs-address" type="text" class="validate" placeholder="Address" ng-model="vm.newRefugee.locs.address">
+          <input id="locs-zip" type="text" class="validate" placeholder="Zip" ng-model="vm.newRefugee.locs.zip">
+     <!--      <input id="locs" type="text" class="validate"  ng-model="vm.newRefugee.locs.currentLoc"> -->
+        </label>
+      </div>
+    </form>
+
+
+
     <button  class="btn btn-default" type="submit" ng-click="vm.postRefugee()">Submit</button>
   </form>
 

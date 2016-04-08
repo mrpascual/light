@@ -30,7 +30,7 @@ function show(req, res, next) {
 }
 
 function create(req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   var user         = new User();
   user.firstName   = req.body.firstName;
   user.lastName    = req.body.lastName;
@@ -41,8 +41,16 @@ function create(req, res) {
   user.status      = req.body.status;
   user.pictureUrl  = req.body.pictureUrl;
 
-  user.locs = [];
+  console.log('what is user.locsXXXXXXXXXXXXXXXXXX',req.body.locs)
 
+
+  user.locs.push({
+    name: req.body.locs.name,
+    address: req.body.locs.address,
+    zip: req.body.locs.zip
+  });
+
+  console.log("WHAT IS THE USER", user)
   // req.body.locs.forEach(function(arr) {
   //   var obj = {};
   //   obj.name = arr[0];
